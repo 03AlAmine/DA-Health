@@ -1,0 +1,111 @@
+.first-div {
+    background-image: url(../Image/bleu.jpeg);
+    height: 30px;
+    filter: brightness(175%);
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-link {
+      margin: 10px;
+      font-size: 18px;
+      color: black  !important;
+      position: relative; /* Assure que .test:before est positionné par rapport à ce lien */
+  }
+  
+  .nav-link:hover{
+      color: #0a88ee !important;
+  }
+  .nav-link::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 50%; /* Déplacez le début de la barre au centre */
+      transform: translateX(-50%); /* Centrez horizontalement la barre */
+      width: 0; /* Commence avec une largeur de 0 */
+      height: 4px; /* Hauteur de la barre lors du survol */
+      background-color: #0a88ee;
+      transition: width 0.3s ease-in-out; /* Transition pour l'ouverture */
+  }
+  
+  .nav-link:hover::before {
+      width: 100%; /* Lorsque survolé, la barre s'étend jusqu'à 100% */
+  }
+  
+  #search-input {
+      display: none;
+      border: none;
+      outline: none;
+      font-size: 16px;
+  }
+  .image_search{
+      cursor: pointer;
+  }
+
+  /*---------------------------------------------------------------- */
+   footer {
+    background-image: url('../Image/fond.jpg'); /* Ajouter une image de fond */
+    opacity: 0.8;
+    background-size: cover; /* Assurer que l'image de fond couvre l'ensemble du footer */
+    color: #fff; /* Toutes les écritures en blanc */
+    padding: 20px 20px; /* Espacement intérieur */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    border-top: 2px solid #ccc; /* Bordure supérieure */
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage */
+  }
+  
+  .section {
+    flex: 1; /* Distribution équitable de l'espace */
+    margin-right: 20px; /* Marge à droite entre les sections */
+  }
+  
+  .section h4 {
+    margin-bottom: 20px; /* Ajouter un espace en bas des titres */
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
+  .explore ul {
+    list-style: none; /* Suppression des puces */
+    padding: 0; /* Suppression du remplissage */
+  }
+  
+  .explore li {
+    margin-bottom: 8px; /* Ajouter un espace entre les éléments de la liste */
+    text-decoration: none;
+  }
+  
+  .social-media {
+    text-align: right; /* Alignement à droite */
+  }
+  
+  .social-link {
+    color: #fff; /* Couleur des liens */
+    text-decoration: none;
+    margin-right: 10px; /* Marge à droite entre les liens */
+  }
+  
+  .social-link i {
+    margin-right: 5px; /* Marge à droite entre l'icône et le texte */
+  }
+  
+  .social-link:hover {
+    text-decoration: none; /*Pas de soulignement au survol */
+  }
+  
+  .legal-info {
+    text-align: center; /* Centrage du texte des mentions légales */
+    margin-top: 20px; /* Marge en haut */
+  }

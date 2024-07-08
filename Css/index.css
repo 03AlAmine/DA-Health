@@ -1,0 +1,257 @@
+body
+{
+    overflow-x: hidden;
+}
+
+
+
+/*--------------------------Dieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee--------------------------------------*/
+
+
+.fond {
+    position: relative;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  
+.texte {
+    position: absolute;
+    top: 45%;
+    left: 65%; 
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+  } 
+  
+
+  .bouton {
+    margin-top: 20px;
+  }
+
+  .btn {
+    position: relative; 
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    overflow: hidden;
+    cursor:pointer; 
+    background: linear-gradient(#ff7f00, #ffae42, #ffcc80);
+    transition: background-color 3s ease;
+  }
+  .btn:hover{
+  background: none !important;
+  border: 1px solid white;
+  }
+  .btn:hover:before {
+    top: 0;
+  }
+  /*--------------------------Al Amineeeeeeeeeeeeeeeeee--------------------------------------*/
+@keyframes for-fond-first{
+  0% {
+      opacity: 0;
+      transform: translateX(-10%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.fond-first{
+  animation: for-fond-first 3s ease forwards;
+  opacity: 0;
+  animation-delay: 2s; 
+}
+@keyframes for-btn_insc{
+  0% {
+      opacity: 0;
+      transform: translateX(-10%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.btn_insc{
+  animation: for-fond-first 2s ease forwards;
+  opacity: 0;
+  animation-delay: 1s; 
+}
+/*--------------------------Dieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee--------------------------------------*/
+  
+  /* Cartes */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 18rem;
+    margin: 0 0px;
+    transition: transform 0.3s ease;
+    border:1px solid rgb(244, 238, 238);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-img-top {
+    display: block;
+    margin: 0 auto;
+    width: 90px;
+  }
+  
+  .card-body {
+    text-align: center;
+    font-size: 18px;
+    color: black; /* Couleur du texte */
+  }
+  
+ 
+
+/*-------------------------------*/
+
+.first-section{
+    background-image: url(../Image/cornner-image.jpg);
+    background-repeat: no-repeat;
+}
+
+@keyframes for-about{
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#text-for-about{
+    animation: for-about 5s ease forwards;
+    opacity: 0;
+    animation-delay: 2s; 
+}
+
+@keyframes image-about{
+    0% {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#image-about{
+    animation: image-about 5s ease forwards;
+    animation-delay: 0s; 
+}
+.img-about{
+    width: 90%;
+}
+
+.btn_suite {
+  width: 200px;
+  height: 45px;
+  color: #0a88ee;
+  cursor: pointer;
+  font-size: 15px;
+  overflow: hidden;
+  border: 1px solid #0a88ee;
+  border-radius: 20px;
+  text-decoration: none !important;
+}
+.btn_suite:hover{
+  border: 1px solid #0d796f;
+  transform: translateX(-30px);
+  transition: 2s ease-in;
+
+}
+  
+/*-------------------Second Section--------------------------------------*/
+
+.second-section{
+  background-image: url(../Image/service-back.png);
+  background-position: start;
+  background-repeat: no-repeat;
+  margin: 10px;
+  padding-top: 60px;
+}
+
+
+@keyframes for-img_sec1 {
+  0% {
+      opacity: 0;
+      transform: translateY(200%);
+  }
+  50% {
+      opacity: 0;
+      transform: translateY(100%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes for-img_sec2 {
+  0% {
+      opacity: 0;
+      transform: translateY(200%);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(100%);
+}
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes for-img_sec3 {
+  0% {
+      opacity: 0;
+      transform: translateY(200%);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(100%);
+}
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.img_secon_sec1 {
+  overflow: hidden;
+  animation: for-img_sec1 4s ease forwards;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+.img_secon_sec2 {
+  animation: for-img_sec2 6s ease forwards;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+.img_secon_sec3 {
+  animation: for-img_sec3 8s ease forwards;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+
