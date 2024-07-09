@@ -43,7 +43,8 @@ include "../layouts/header.php";
                     médical.
                 </div>
                 <div class="bouton btn_insc mb-5">
-                    <a type="submit" class=" btn animation  col-md-5 " style="border-radius: 30px;">Inscription</a>
+                    <a href="register_process.php" type="submit" class=" btn animation  col-md-5 "
+                        style="border-radius: 30px;">Inscription</a>
                 </div>
                 <p>Rejoignez-nous dès aujourd'hui et découvrez une nouvelle façon de pratiquer la médecine!!
                 </p>
