@@ -207,6 +207,7 @@ include "../layouts/header.php";
 
 </body>
 
-</html <?php
-        include "../layouts/footer.php";
-        ?>
+</html>
+<?php
+include "../layouts/footer.php";
+?>
