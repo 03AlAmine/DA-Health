@@ -30,10 +30,9 @@ try {
     )";
     $bdd->exec($table);
 
-    $message = "Database and table created and connected successfully.";
+    // $message = "Database and table created and connected successfully.";
 } catch (PDOException $e) {
     $message = "Database connection error: " . $e->getMessage();
 }
 
 //echo $message;
-?>

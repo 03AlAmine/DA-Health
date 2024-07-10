@@ -39,7 +39,6 @@ body {
     border-inline: 2px solid transparent;
 }
 
-
 .form .input::placeholder {
     color: rgb(170, 170, 170);
 }
@@ -158,4 +157,21 @@ h4 a:hover {
 
 .white-icon {
     color: #fff;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group .input {
+    width: calc(100% - 30px); /* ajustez la valeur selon vos besoins */
+    padding-right: 30px; /* espace pour l'icône */
+}
+
+.input-group i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }

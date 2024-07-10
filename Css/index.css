@@ -173,6 +173,8 @@ body
   text-decoration: none !important;
 }
 .btn_suite:hover{
+
+  color: #0d796f;
   border: 1px solid #0d796f;
   transform: translateX(-30px);
   transition: 2s ease-in;

@@ -44,6 +44,26 @@
   .image_search{
       cursor: pointer;
   }
+  
+  .dropdown-toggle {
+    width: 50px; /* ou toute autre valeur que vous préférez */
+    height: 50px; /* assurez-vous que la hauteur et la largeur sont égales */
+    border-radius: 50%;
+    background-color: #0d796f;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border: none; /* Supprime les bordures par défaut */
+    cursor: pointer; /* Change le curseur pour indiquer qu'il est cliquable */
+}
+
+
+.dropdown-toggle::after {
+  display: none; /* Supprime la flèche par défaut du bouton */
+}
 
   /*---------------------------------------------------------------- */
    footer {

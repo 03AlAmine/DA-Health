@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../Css/log_process.css">
-
 </head>
 <?php
 include '../config/db.php';
@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $mdp = htmlspecialchars($_POST['mdp']);
     $confirm = htmlspecialchars($_POST['confirm']);
+    $message = "";
 
     // Verifie si tous les champs sont remplis
     if (empty($username) || empty($email) || empty($date) || empty($mdp) || empty($confirm)) {
@@ -63,22 +64,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="container">
-
         <div class="heading">S'inscrire</div>
+        <?php echo $message ?>
         <!--  ligne pour afficher les messages -->
 
         <form action="" method="post" class="form">
             <input required="" class="input" type="text" name="username" id="username" placeholder="Username">
             <input required="" class="input" type="date" name="date" id="date" placeholder="Date de Naissance">
             <input required="" class="input" type="email" name="email" id="email" placeholder="Email">
-            <input required="" class="input" type="password" name="mdp" id="password" placeholder="Password">
-
-            <input required="" class="input" type="password" name="confirm" id="confirm" placeholder="Confirm Password">
+            <div class="input-group">
+                <input required="" class="input" type="password" name="mdp" id="password" placeholder="Password">
+                <i id="toggle-password" class="fas fa-eye-slash"></i>
+            </div>
+            <div class="input-group">
+                <input required="" class="input" type="password" name="confirm" id="confirm"
+                    placeholder="Confirm Password">
+                <i id="toggle-confirm-password" class="fas fa-eye-slash"></i>
+            </div>
             <h4>Déja un compte?<a href="login_process.php"> Se connecter !</a></h4>
             <span id="password-message" class="error-message"></span>
 
             <input class="login-button" type="submit" value="S'inscrire">
-
         </form>
 
         <div class="social-account-container">
@@ -96,37 +102,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
         <script>
-            const togglePasswordButton = document.getElementById('toggle-password');
-            const passwordInpute = document.getElementById('password');
-            togglePasswordButton.addEventListener('click', function() {
-                if (passwordInpute.type === 'password') {
-                    passwordInpute.type = 'text';
-                    togglePasswordButton.classList.remove('fa-eye-slash');
-                    togglePasswordButton.classList.add('fa-eye');
-                } else {
-                    passwordInpute.type = 'password';
-                    togglePasswordButton.classList.remove('fa-eye');
-                    togglePasswordButton.classList.add('fa-eye-slash');
-                }
-            });
+        const togglePasswordButton = document.getElementById('toggle-password');
+        const passwordInput = document.getElementById('password');
+        togglePasswordButton.addEventListener('click', function() {
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            togglePasswordButton.classList.toggle('fa-eye');
+            togglePasswordButton.classList.toggle('fa-eye-slash');
+        });
 
-            const toggleConfirmPasswordButton = document.getElementById('toggle-confirm-password');
-            const confirmPasswordInpute = document.getElementById('confirm-password');
-            toggleConfirmPasswordButton.addEventListener('click', function() {
-                if (confirmPasswordInpute.type === 'password') {
-                    confirmPasswordInpute.type = 'text';
-                    toggleConfirmPasswordButton.classList.remove('fa-eye-slash');
-                    toggleConfirmPasswordButton.classList.add('fa-eye');
-                } else {
-                    confirmPasswordInpute.type = 'password';
-                    toggleConfirmPasswordButton.classList.remove('fa-eye');
-                    toggleConfirmPasswordButton.classList.add('fa-eye-slash');
-                }
-            });
+        const toggleConfirmPasswordButton = document.getElementById('toggle-confirm-password');
+        const confirmPasswordInput = document.getElementById('confirm');
+        toggleConfirmPasswordButton.addEventListener('click', function() {
+            const type = confirmPasswordInput.type === 'password' ? 'text' : 'password';
+            confirmPasswordInput.type = type;
+            toggleConfirmPasswordButton.classList.toggle('fa-eye');
+            toggleConfirmPasswordButton.classList.toggle('fa-eye-slash');
+        });
         </script>
-
-
-
+    </div>
 </body>
 
 </html>
